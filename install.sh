@@ -47,7 +47,6 @@ Check_Root() {
   if [[ $(id -u) != 0 ]] >/dev/null; then
     echo -e "\nYou must run on root user to install CyberPanel...\n"
     echo -e "or run following command: (do NOT miss the quotes)"
-    echo -e "\e[31msudo su -c \"\"\e[39m"
     exit 1
   else
     echo -e "\nYou are runing as root...\n"
