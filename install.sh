@@ -66,7 +66,4 @@ Check_Root()
 #sudo firewall-cmd --zone=public --permanent --add-port=8090/tcp
 #sudo firewall-cmd --reload
 
-history -c
-echo "" > /root/.bash_history
-
 echo "#### ¡Finished!. If you are going to restart do it in 10 minutes because you're be updating MySQL ####"
