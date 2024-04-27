@@ -32,7 +32,7 @@ fi
 #wget https://raw.githubusercontent.com/diyarit/Centos-Config/master/configure_centos.sh -O "$CWD/configure_centos.sh" && bash "$CWD/configure_centos.sh"
 
 #echo "####### CPANEL PRE-CONFIGURATION ##########"
-#echo "Disabling yum-cron..."
+echo "Disabling yum-cron..."
 #yum erase yum-cron -y
 
 Sudo_Test=$(set)
@@ -47,21 +47,12 @@ Check_Root() {
   if [[ $(id -u) != 0 ]] >/dev/null; then
     echo -e "\nYou must run on root user to install CyberPanel...\n"
     echo -e "or run following command: (do NOT miss the quotes)"
-   # echo -e "\e[31msudo su -c \"sh <(curl https://cyberpanel.sh || wget -O - https://cyberpanel.sh)\"\e[39m"
+    echo -e "\e[31msudo su -c \"\"\e[39m"
     exit 1
   else
     echo -e "\nYou are runing as root...\n"
   fi
 }
-Check_Root()
+Check_Root
 
-#sudo su -
-#passwd
-#dnf install wget curl -y
-#dnf install php-dev php-pecl -y
-#yum -y install openssh-clients
-
-#sh <(curl https://cyberpanel.net/install.sh || wget -O - https://cyberpanel.net/install.sh)
-#sudo firewall-cmd --zone=public --permanent --add-port=7080/tcp
-#sudo firewall-cmd --zone=public --permanent --add-port=8090/tcp
-#sudo firewall-cmd --reload
+echo "Disabling yum-cron22..."
