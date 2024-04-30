@@ -5,8 +5,8 @@ srv="srv.smartiptv.pt"
 Sudo_Test=$(set)
 Check() {
 
-curl -o bash-draw.sh https://github.com/onixsat/install/edit/main/bash-draw.sh
-curl -o bash-menu.sh https://github.com/onixsat/install/edit/main/bash-menu.sh
+curl -o bash-draw2.sh https://github.com/onixsat/install/edit/main/bash-draw.sh
+curl -o bash-menu2.sh https://github.com/onixsat/install/edit/main/bash-menu.sh
 
 	. "bash-menu.sh"
 	
@@ -21,7 +21,7 @@ curl -o bash-menu.sh https://github.com/onixsat/install/edit/main/bash-menu.sh
 			exit 0
 		fi
 	}
-	load
+	#load
 	
 	echo -e "\nChecking root privileges..."
 	if echo "$Sudo_Test" | grep SUDO >/dev/null; then
